@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Login</class>
+ <widget class="QMainWindow" name="Login">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Login</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="SignInBox">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>50</y>
+      <width>391</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Sign In</string>
+    </property>
+    <widget class="QPushButton" name="BtnForget">
+     <property name="geometry">
+      <rect>
+       <x>127</x>
+       <y>150</y>
+       <width>145</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Forget Password</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_SignUp">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>150</y>
+       <width>95</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Sign Up!</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>80</y>
+       <width>85</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Sign In</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>50</y>
+       <width>231</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <layout class="QFormLayout" name="TextLayer">
+      <item row="0" column="0">
+       <widget class="QLabel" name="LabelUsername">
+        <property name="text">
+         <string>Username </string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="EditUsername"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="LabelPassword">
+        <property name="text">
+         <string>Password</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="EditPassword"/>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="indicator">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>270</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>     File -- </string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

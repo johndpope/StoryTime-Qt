@@ -1,0 +1,1068 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+		5E618435888B9D49F8540165 = {
+			buildActionMask = 2147483647;
+			files = (
+				);
+			isa = PBXShellScriptBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Qt Qmake";
+			shellPath = "/bin/sh";
+			shellScript = "make -C /Users/zthunder/Documents/z-SourceTree/StoryTime/build-StoryTime_01-iphonesimulator_clang_Qt_5_5_0_for_iOS-Debug/ -f StoryTime_01.xcodeproj/qt_makeqmake.mak";
+			showEnvVarsInLog = "0";
+		};
+		9F7FC3D953B1B0235E121662 = {
+			isa = PBXFileReference;
+			path = "/Users/zthunder/Documents/z-SourceTree/StoryTime/StoryTime_01/main.cpp";
+			name = "main.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		39234830CEFAD56DFC87F824 = {
+			fileRef = "9F7FC3D953B1B0235E121662";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		77CFDC3C835AC6922E4CC81F = {
+			isa = PBXFileReference;
+			path = "/Users/zthunder/Documents/z-SourceTree/StoryTime/StoryTime_01/login.cpp";
+			name = "login.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		71392E688F2D1D5E200FF53A = {
+			fileRef = "77CFDC3C835AC6922E4CC81F";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		EC4AD3B7BE76E6E363C937FE = {
+			isa = PBXFileReference;
+			path = "/Users/zthunder/Documents/z-SourceTree/StoryTime/build-StoryTime_01-iphonesimulator_clang_Qt_5_5_0_for_iOS-Debug/storytime_01_plugin_import.cpp";
+			name = "storytime_01_plugin_import.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		0E5CE86BACDB98FE3AA5D419 = {
+			fileRef = "EC4AD3B7BE76E6E363C937FE";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		EF37732003F5DA24C676625B = {
+			isa = PBXFileReference;
+			path = "/Users/zthunder/Documents/z-SourceTree/StoryTime/build-StoryTime_01-iphonesimulator_clang_Qt_5_5_0_for_iOS-Debug/moc_login.cpp";
+			name = "moc_login.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		4E998389EA0EA2B74657FFDF = {
+			fileRef = "EF37732003F5DA24C676625B";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		D47E2DCE2600D7340E8B61E4 = {
+			isa = PBXFileReference;
+			path = "/Users/zthunder/Documents/z-SourceTree/StoryTime/build-StoryTime_01-iphonesimulator_clang_Qt_5_5_0_for_iOS-Debug/ui_login.h";
+			name = "ui_login.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		3BA5026790EE832CE73ACDB0 = {
+			isa = PBXFileReference;
+			path = "/Users/zthunder/Documents/z-SourceTree/StoryTime/StoryTime_01/login.h";
+			name = "login.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		A07D93737BCBFDDB249FC84C = {
+			isa = PBXFileReference;
+			path = "/Users/zthunder/Documents/z-SourceTree/StoryTime/build-StoryTime_01-iphonesimulator_clang_Qt_5_5_0_for_iOS-Debug/StoryTime_01.pro";
+			name = "StoryTime_01.pro";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "text";
+		};
+		3C109BE6FA463939DFB05A63 = {
+			isa = PBXFileReference;
+			path = "/Users/zthunder/Documents/z-SourceTree/StoryTime/build-StoryTime_01-iphonesimulator_clang_Qt_5_5_0_for_iOS-Debug/.qmake.stash";
+			name = ".qmake.stash";
+			sourceTree = "<absolute>";
+		};
+		CAC1A360173886591248C334 = {
+			isa = PBXFileReference;
+			path = "/Users/zthunder/Documents/z-SourceTree/StoryTime/StoryTime_01/StoryTime_01.pro";
+			name = "StoryTime_01.pro";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "text";
+		};
+		B29C5A4DEA5292F6F075C9CF = {
+			isa = PBXFileReference;
+			path = "/Users/zthunder/Documents/z-SourceTree/StoryTime/StoryTime_01/login.ui";
+			name = "login.ui";
+			sourceTree = "<absolute>";
+		};
+		17903279A34643131A3E172D = {
+			fileRef = "B29C5A4DEA5292F6F075C9CF";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		25B08E2869634E9BCBA333A2 = {
+			isa = PBXGroup;
+			children = (
+				"EF37732003F5DA24C676625B",
+				"D47E2DCE2600D7340E8B61E4");
+			name = "Generated Sources";
+			sourceTree = "<Group>";
+		};
+		2EB56BE3C2D93CDAB0C52E67 = {
+			isa = PBXGroup;
+			children = (
+				"9F7FC3D953B1B0235E121662",
+				"77CFDC3C835AC6922E4CC81F",
+				"EC4AD3B7BE76E6E363C937FE",
+				"3BA5026790EE832CE73ACDB0");
+			name = "Sources";
+			sourceTree = "<Group>";
+		};
+		12E908B8A1C3C07C115504F5 = {
+			isa = PBXGroup;
+			children = (
+				"B29C5A4DEA5292F6F075C9CF");
+			name = "Sources [uic]";
+			sourceTree = "<Group>";
+		};
+		74B182DB50CB5611B5C1C297 = {
+			isa = PBXGroup;
+			children = (
+				"A07D93737BCBFDDB249FC84C",
+				"3C109BE6FA463939DFB05A63",
+				"CAC1A360173886591248C334");
+			name = "Supporting Files";
+			sourceTree = "<Group>";
+		};
+		7EF0942E79C014DCEC8976BC = {
+			buildActionMask = 2147483647;
+			files = (
+				);
+			isa = PBXShellScriptBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Qt Preprocessors";
+			shellPath = "/bin/sh";
+			shellScript = "make -C /Users/zthunder/Documents/z-SourceTree/StoryTime/build-StoryTime_01-iphonesimulator_clang_Qt_5_5_0_for_iOS-Debug/ -f StoryTime_01.xcodeproj/qt_preprocess.mak";
+			showEnvVarsInLog = "0";
+		};
+		F7E50F631C51CD5B5DC0BC43 = {
+			buildActionMask = 2147483647;
+			files = (
+				"39234830CEFAD56DFC87F824",
+				"71392E688F2D1D5E200FF53A",
+				"0E5CE86BACDB98FE3AA5D419",
+				"4E998389EA0EA2B74657FFDF");
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Compile Sources";
+		};
+		759CBF91081B9CBC7A192E3D = {
+			isa = PBXFileReference;
+			name = "qios";
+			path = "/Users/zthunder/Qt/5.5/ios/plugins/platforms/libqios$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		A931EF7F302862EBC2ADE2B9 = {
+			fileRef = "759CBF91081B9CBC7A192E3D";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		FCC237CA5AD60B9BA4447615 = {
+			isa = PBXFileReference;
+			name = "Foundation.framework";
+			path = "/System/Library/Frameworks/Foundation.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		F26454630C80841CBDCFE1CA = {
+			fileRef = "FCC237CA5AD60B9BA4447615";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		7EC00404ACD5AB0E97726B0E = {
+			isa = PBXFileReference;
+			name = "QuartzCore.framework";
+			path = "/System/Library/Frameworks/QuartzCore.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		B460F624007324313696BE86 = {
+			fileRef = "7EC00404ACD5AB0E97726B0E";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4D765E1B1EA6C757220C63E7 = {
+			isa = PBXFileReference;
+			name = "CoreFoundation.framework";
+			path = "/System/Library/Frameworks/CoreFoundation.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		F8B465CE34D8DF87AAE95913 = {
+			fileRef = "4D765E1B1EA6C757220C63E7";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		7D7B02101166B76FD2D4F8B4 = {
+			isa = PBXFileReference;
+			name = "CoreText.framework";
+			path = "/System/Library/Frameworks/CoreText.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		2B02D9DC58A01E45248DDBCE = {
+			fileRef = "7D7B02101166B76FD2D4F8B4";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		6AE3EC31EE5BB1FCEE84137C = {
+			isa = PBXFileReference;
+			name = "CoreGraphics.framework";
+			path = "/System/Library/Frameworks/CoreGraphics.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		0CE02722F00CAD43741297B5 = {
+			fileRef = "6AE3EC31EE5BB1FCEE84137C";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9D634408AABE4B5463321B42 = {
+			isa = PBXFileReference;
+			name = "Qt5PlatformSupport";
+			path = "/Users/zthunder/Qt/5.5/ios/lib/libQt5PlatformSupport$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		1F679B4F8E4E4F9EA2817B0A = {
+			fileRef = "9D634408AABE4B5463321B42";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		DD9B6B80E9C10CA3013D3B0E = {
+			isa = PBXFileReference;
+			name = "Qt5DBus";
+			path = "/Users/zthunder/Qt/5.5/ios/lib/libQt5DBus$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		DC73B17073BE65DA2E40C4C4 = {
+			fileRef = "DD9B6B80E9C10CA3013D3B0E";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		0D7911E456E690705B1C4B26 = {
+			isa = PBXFileReference;
+			name = "Qt5Widgets";
+			path = "/Users/zthunder/Qt/5.5/ios/lib/libQt5Widgets$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		5E5EC087B39F75861D9ADE88 = {
+			fileRef = "0D7911E456E690705B1C4B26";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		22269D0FD98ABA8803B41987 = {
+			isa = PBXFileReference;
+			name = "qdds";
+			path = "/Users/zthunder/Qt/5.5/ios/plugins/imageformats/libqdds$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		6EF49122AD8A0BEE2CB59BCE = {
+			fileRef = "22269D0FD98ABA8803B41987";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		CBE3EED8D227EB5599351383 = {
+			isa = PBXFileReference;
+			name = "qicns";
+			path = "/Users/zthunder/Qt/5.5/ios/plugins/imageformats/libqicns$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		D1FA698210C681EA0A635155 = {
+			fileRef = "CBE3EED8D227EB5599351383";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4D6D051715FEE25745887EF0 = {
+			isa = PBXFileReference;
+			name = "qico";
+			path = "/Users/zthunder/Qt/5.5/ios/plugins/imageformats/libqico$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		2D139CF33B958731B9A45A7E = {
+			fileRef = "4D6D051715FEE25745887EF0";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		7B51BE4C53CBBC0B47D6E2C9 = {
+			isa = PBXFileReference;
+			name = "qjp2";
+			path = "/Users/zthunder/Qt/5.5/ios/plugins/imageformats/libqjp2$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		9841258E1126B9A42DE383DE = {
+			fileRef = "7B51BE4C53CBBC0B47D6E2C9";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		3AD2F78ECAD720E20327C6DA = {
+			isa = PBXFileReference;
+			name = "qmng";
+			path = "/Users/zthunder/Qt/5.5/ios/plugins/imageformats/libqmng$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		B4BE0B603E6D647AEDC1E0E5 = {
+			fileRef = "3AD2F78ECAD720E20327C6DA";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E3C348CB31DDC00AE7784666 = {
+			isa = PBXFileReference;
+			name = "qtga";
+			path = "/Users/zthunder/Qt/5.5/ios/plugins/imageformats/libqtga$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		2581BA003CCCE2D90C8057F5 = {
+			fileRef = "E3C348CB31DDC00AE7784666";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8DE2B7F16C63106AA74320CA = {
+			isa = PBXFileReference;
+			name = "qtiff";
+			path = "/Users/zthunder/Qt/5.5/ios/plugins/imageformats/libqtiff$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		6F2F6AE73C463B7C2B33D17F = {
+			fileRef = "8DE2B7F16C63106AA74320CA";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		00681B84B076F11BA52DBB7D = {
+			isa = PBXFileReference;
+			name = "qwbmp";
+			path = "/Users/zthunder/Qt/5.5/ios/plugins/imageformats/libqwbmp$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		0B773BC84D3B1372EE044821 = {
+			fileRef = "00681B84B076F11BA52DBB7D";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		392FFEA64E8EDFDC79C88A63 = {
+			isa = PBXFileReference;
+			name = "Qt5Gui";
+			path = "/Users/zthunder/Qt/5.5/ios/lib/libQt5Gui$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		8F6113451A5829547025BD48 = {
+			fileRef = "392FFEA64E8EDFDC79C88A63";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		45CA0F57BC2FB3625B26EB0F = {
+			isa = PBXFileReference;
+			name = "qtharfbuzzng";
+			path = "/Users/zthunder/Qt/5.5/ios/lib/libqtharfbuzzng$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		E9547D7621DA8A2256A6417D = {
+			fileRef = "45CA0F57BC2FB3625B26EB0F";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9F4ECB1C612691697BDE25C0 = {
+			isa = PBXFileReference;
+			name = "qsqlite";
+			path = "/Users/zthunder/Qt/5.5/ios/plugins/sqldrivers/libqsqlite$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		0E85EEB059371DD3E629D7F4 = {
+			fileRef = "9F4ECB1C612691697BDE25C0";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		984E5B654E49EEF87F235E4A = {
+			isa = PBXFileReference;
+			name = "Qt5Sql";
+			path = "/Users/zthunder/Qt/5.5/ios/lib/libQt5Sql$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		745FD86E6B8B650DC5401600 = {
+			fileRef = "984E5B654E49EEF87F235E4A";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		FDA192F071F00187D53011D5 = {
+			isa = PBXFileReference;
+			name = "Qt5Core";
+			path = "/Users/zthunder/Qt/5.5/ios/lib/libQt5Core$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		9FA43F2BD79E2FA3B61A944F = {
+			fileRef = "FDA192F071F00187D53011D5";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F86CD23A4F04A6A97170064B = {
+			isa = PBXFileReference;
+			name = "qtpcre";
+			path = "/Users/zthunder/Qt/5.5/ios/lib/libqtpcre$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		A264E922D27B71AD8EB5CC9B = {
+			fileRef = "F86CD23A4F04A6A97170064B";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		3DA90DAE39A0C9D07C6F6B0F = {
+			buildActionMask = 2147483647;
+			files = (
+				);
+			inputPaths = (
+				"$(OBJECT_FILE_DIR_$(CURRENT_VARIANT))/armv7/",
+				"$(OBJECT_FILE_DIR_$(CURRENT_VARIANT))/arm64/",
+				"$(OBJECT_FILE_DIR_$(CURRENT_VARIANT))/i386/",
+				"$(OBJECT_FILE_DIR_$(CURRENT_VARIANT))/x86_64/");
+			outputPaths = (
+				"$(LINK_FILE_LIST_$(CURRENT_VARIANT)_armv7)",
+				"$(LINK_FILE_LIST_$(CURRENT_VARIANT)_arm64)",
+				"$(LINK_FILE_LIST_$(CURRENT_VARIANT)_i386)",
+				"$(LINK_FILE_LIST_$(CURRENT_VARIANT)_x86_64)");
+			isa = PBXShellScriptBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Qt Prelink";
+			shellPath = "/bin/sh";
+			shellScript = "/Users/zthunder/Qt/5.5/ios/mkspecs/macx-ios-clang/rename_main.sh \"${OBJECT_FILE_DIR}-${CURRENT_VARIANT}\" \"${ARCHS}\"";
+			showEnvVarsInLog = "0";
+		};
+		AF39DD055C3EF8226FBE929D = {
+			children = (
+				"759CBF91081B9CBC7A192E3D",
+				"FCC237CA5AD60B9BA4447615",
+				"7EC00404ACD5AB0E97726B0E",
+				"4D765E1B1EA6C757220C63E7",
+				"7D7B02101166B76FD2D4F8B4",
+				"6AE3EC31EE5BB1FCEE84137C",
+				"9D634408AABE4B5463321B42",
+				"DD9B6B80E9C10CA3013D3B0E",
+				"0D7911E456E690705B1C4B26",
+				"22269D0FD98ABA8803B41987",
+				"CBE3EED8D227EB5599351383",
+				"4D6D051715FEE25745887EF0",
+				"7B51BE4C53CBBC0B47D6E2C9",
+				"3AD2F78ECAD720E20327C6DA",
+				"E3C348CB31DDC00AE7784666",
+				"8DE2B7F16C63106AA74320CA",
+				"00681B84B076F11BA52DBB7D",
+				"392FFEA64E8EDFDC79C88A63",
+				"45CA0F57BC2FB3625B26EB0F",
+				"9F4ECB1C612691697BDE25C0",
+				"984E5B654E49EEF87F235E4A",
+				"FDA192F071F00187D53011D5",
+				"F86CD23A4F04A6A97170064B");
+			isa = PBXGroup;
+			name = "Frameworks";
+			sourceTree = "<Group>";
+		};
+		D1C883685E82D5676953459A = {
+			buildActionMask = 2147483647;
+			files = (
+				"A931EF7F302862EBC2ADE2B9",
+				"F26454630C80841CBDCFE1CA",
+				"B460F624007324313696BE86",
+				"F8B465CE34D8DF87AAE95913",
+				"2B02D9DC58A01E45248DDBCE",
+				"0CE02722F00CAD43741297B5",
+				"1F679B4F8E4E4F9EA2817B0A",
+				"DC73B17073BE65DA2E40C4C4",
+				"5E5EC087B39F75861D9ADE88",
+				"6EF49122AD8A0BEE2CB59BCE",
+				"D1FA698210C681EA0A635155",
+				"2D139CF33B958731B9A45A7E",
+				"9841258E1126B9A42DE383DE",
+				"B4BE0B603E6D647AEDC1E0E5",
+				"2581BA003CCCE2D90C8057F5",
+				"6F2F6AE73C463B7C2B33D17F",
+				"0B773BC84D3B1372EE044821",
+				"8F6113451A5829547025BD48",
+				"E9547D7621DA8A2256A6417D",
+				"0E85EEB059371DD3E629D7F4",
+				"745FD86E6B8B650DC5401600",
+				"9FA43F2BD79E2FA3B61A944F",
+				"A264E922D27B71AD8EB5CC9B");
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Link Binary With Libraries";
+		};
+		F863AA3EA455833D79410325 = {
+			isa = PBXFileReference;
+			path = "/Users/zthunder/Documents/z-SourceTree/StoryTime/build-StoryTime_01-iphonesimulator_clang_Qt_5_5_0_for_iOS-Debug/StoryTime_01.xcodeproj/Default-568h@2x.png";
+			name = "Default-568h@2x.png";
+			sourceTree = "<absolute>";
+		};
+		F902299D3C240329CDC75016 = {
+			fileRef = "F863AA3EA455833D79410325";
+			isa = PBXBuildFile;
+		};
+		02C28FE8DB23343F10CD8A38 = {
+			isa = PBXFileReference;
+			path = "/Users/zthunder/Documents/z-SourceTree/StoryTime/build-StoryTime_01-iphonesimulator_clang_Qt_5_5_0_for_iOS-Debug/StoryTime_01.xcodeproj/LaunchScreen.xib";
+			name = "LaunchScreen.xib";
+			sourceTree = "<absolute>";
+		};
+		7FD78C9F623D75F666A5EDB0 = {
+			fileRef = "02C28FE8DB23343F10CD8A38";
+			isa = PBXBuildFile;
+		};
+		858FCAB0EB1F29CF8B07677C = {
+			children = (
+				"F863AA3EA455833D79410325",
+				"02C28FE8DB23343F10CD8A38");
+			isa = PBXGroup;
+			name = "Bundle Data";
+			sourceTree = "<Group>";
+		};
+		30414803F31797EB689AE508 = {
+			buildActionMask = 2147483647;
+			files = (
+				"F902299D3C240329CDC75016",
+				"7FD78C9F623D75F666A5EDB0");
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Copy Bundle Resources";
+		};
+		779BE9C15641DF4A9FBF6EA0 = {
+			isa = PBXFileReference;
+			includeInIndex = 0;
+			explicitFileType = "wrapper.application";
+			path = "StoryTime_01.app";
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FE0A091FDBFB3E9C31B7A1BD = {
+			children = (
+				"779BE9C15641DF4A9FBF6EA0");
+			isa = PBXGroup;
+			name = "Products";
+			sourceTree = "<Group>";
+		};
+		E8C543AB96796ECAA2E65C57 = {
+			children = (
+				"2EB56BE3C2D93CDAB0C52E67",
+				"25B08E2869634E9BCBA333A2",
+				"74B182DB50CB5611B5C1C297",
+				"12E908B8A1C3C07C115504F5",
+				"AF39DD055C3EF8226FBE929D",
+				"858FCAB0EB1F29CF8B07677C",
+				"FE0A091FDBFB3E9C31B7A1BD");
+			isa = PBXGroup;
+			name = "StoryTime_01";
+			sourceTree = "<Group>";
+		};
+		48CF4EF2A76C9FC56505DB69 = {
+			buildPhases = (
+				"5E618435888B9D49F8540165",
+				"7EF0942E79C014DCEC8976BC");
+			dependencies = (
+				);
+			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59;
+			isa = PBXAggregateTarget;
+			buildRules = (
+);
+			productName = "Qt Preprocess";
+			name = "Qt Preprocess";
+		};
+		FF11AD744FAD21C9EEAA6B42 = {
+			isa = PBXTargetDependency;
+			target = "48CF4EF2A76C9FC56505DB69";
+		};
+		1A3058DB2D86750471777A63 = {
+			buildPhases = (
+				"F7E50F631C51CD5B5DC0BC43",
+				"3DA90DAE39A0C9D07C6F6B0F",
+				"D1C883685E82D5676953459A",
+				"30414803F31797EB689AE508");
+			dependencies = (
+				"FF11AD744FAD21C9EEAA6B42");
+			productReference = "779BE9C15641DF4A9FBF6EA0";
+			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59;
+			isa = PBXNativeTarget;
+			buildRules = (
+);
+			productType = "com.apple.product-type.application";
+			name = "StoryTime_01";
+			productName = "StoryTime_01";
+		};
+		3AA6C32AC930069E80220CF1 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"ARCHS[sdk=iphoneos*]" = "armv7 arm64";
+				"ARCHS[sdk=iphonesimulator*]" = "i386 x86_64";
+				COPY_PHASE_STRIP = "NO";
+				DEBUG_INFORMATION_FORMAT = "dwarf";
+				ENABLE_BITCODE = "NO";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = "YES";
+				GCC_OPTIMIZATION_LEVEL = "0";
+				ONLY_ACTIVE_ARCH = "YES";
+				PRODUCT_NAME = "StoryTime_01";
+				"QMAKE_MAC_SDK_PATH[sdk=iphoneos*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.2.sdk";
+				"QMAKE_MAC_SDK_PATH[sdk=iphonesimulator*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.2.sdk";
+				"QMAKE_MAC_SDK_PLATFORM_PATH[sdk=iphoneos*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform";
+				"QMAKE_MAC_SDK_PLATFORM_PATH[sdk=iphonesimulator*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform";
+				QT_LIBRARY_SUFFIX = "_debug";
+				"QT_LIBRARY_SUFFIX[sdk=iphonesimulator*]" = "_iphonesimulator$(QT_LIBRARY_SUFFIX)";
+				SDKROOT = "iphonesimulator";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				CC = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang";
+				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
+				INFOPLIST_FILE = "Info.plist";
+				SYMROOT = "/Users/zthunder/Documents/z-SourceTree/StoryTime/build-StoryTime_01-iphonesimulator_clang_Qt_5_5_0_for_iOS-Debug/";
+				DYLIB_CURRENT_VERSION = "1.0.0";
+				DYLIB_COMPATIBILITY_VERSION = "1.0";
+				IPHONEOS_DEPLOYMENT_TARGET = "5.1.1";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"../StoryTime_01",
+					".",
+					"/Users/zthunder/Qt/5.5/ios/mkspecs/macx-ios-clang/ios",
+					"../../../../Qt/5.5/ios/include",
+					"../../../../Qt/5.5/ios/include/QtWidgets",
+					"../../../../Qt/5.5/ios/include/QtGui",
+					"../../../../Qt/5.5/ios/include/QtSql",
+					"../../../../Qt/5.5/ios/include/QtCore",
+					".",
+					".",
+					"../../../../Qt/5.5/ios/mkspecs/macx-ios-clang");
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/zthunder/Qt/5.5/ios/plugins/platforms",
+					"/System/Library/Frameworks/",
+					"/Users/zthunder/Qt/5.5/ios/lib",
+					"/Users/zthunder/Qt/5.5/ios/plugins/imageformats",
+					"/Users/zthunder/Qt/5.5/ios/plugins/sqldrivers");
+				FRAMEWORK_SEARCH_PATHS = "";
+				OTHER_CFLAGS = (
+					"-pipe",
+					"-fvisibility=hidden",
+					"-fpascal-strings",
+					"-fmessage-length=0",
+					"-Wno-trigraphs",
+					"-Wreturn-type",
+					"-Wparentheses",
+					"-Wswitch",
+					"-Wno-unused-parameter",
+					"-Wunused-variable",
+					"-Wunused-value",
+					"-Wno-shorten-64-to-32",
+					"-Wno-sign-conversion",
+					"-fexceptions",
+					"-fasm-blocks",
+					"-Wno-missing-field-initializers",
+					"-Wno-missing-prototypes",
+					"-Wno-implicit-atomic-properties",
+					"-Wformat",
+					"-Wno-missing-braces",
+					"-Wno-unused-function",
+					"-Wno-unused-label",
+					"-Wuninitialized",
+					"-Wno-unknown-pragmas",
+					"-Wno-shadow",
+					"-Wno-four-char-constants",
+					"-Wno-sign-compare",
+					"-Wpointer-sign",
+					"-Wno-newline-eof",
+					"-Wdeprecated-declarations",
+					"-Winvalid-offsetof",
+					"-Wno-conversion",
+					"-g",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DDARWIN_NO_CARBON",
+					"-DQT_NO_PRINTER",
+					"-DQT_NO_PRINTDIALOG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_SQL_LIB",
+					"-DQT_CORE_LIB");
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pipe",
+					"-fvisibility=hidden",
+					"-fpascal-strings",
+					"-fmessage-length=0",
+					"-Wno-trigraphs",
+					"-Wreturn-type",
+					"-Wparentheses",
+					"-Wswitch",
+					"-Wno-unused-parameter",
+					"-Wunused-variable",
+					"-Wunused-value",
+					"-Wno-shorten-64-to-32",
+					"-Wno-sign-conversion",
+					"-fexceptions",
+					"-fasm-blocks",
+					"-Wno-missing-field-initializers",
+					"-Wno-missing-prototypes",
+					"-Wno-implicit-atomic-properties",
+					"-Wformat",
+					"-Wno-missing-braces",
+					"-Wno-unused-function",
+					"-Wno-unused-label",
+					"-Wuninitialized",
+					"-Wno-unknown-pragmas",
+					"-Wno-shadow",
+					"-Wno-four-char-constants",
+					"-Wno-sign-compare",
+					"-Wpointer-sign",
+					"-Wno-newline-eof",
+					"-Wdeprecated-declarations",
+					"-Winvalid-offsetof",
+					"-Wno-conversion",
+					"-fvisibility-inlines-hidden",
+					"-Wno-non-virtual-dtor",
+					"-Wno-overloaded-virtual",
+					"-Wno-exit-time-destructors",
+					"-g",
+					"-std=c++11",
+					"-stdlib=libc++",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DDARWIN_NO_CARBON",
+					"-DQT_NO_PRINTER",
+					"-DQT_NO_PRINTDIALOG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_SQL_LIB",
+					"-DQT_CORE_LIB");
+				OTHER_LDFLAGS = (
+						"-headerpad_max_install_names",
+						"-stdlib=libc++",
+						"-u",
+						"_qt_registerPlatformPlugin",
+						"-L/Users/zthunder/Qt/5.5/ios/plugins/platforms",
+						"-framework",
+						"UIKit",
+						"-framework",
+						"AssetsLibrary",
+						"-L/Users/zthunder/Qt/5.5/ios/lib",
+						"-framework",
+						"OpenGLES",
+						"-L/Users/zthunder/Qt/5.5/ios/plugins/imageformats",
+						"-L/Users/zthunder/Qt/5.5/ios/plugins/sqldrivers",
+						"-lz",
+						"-lm");
+				ARCHS = "armv7 arm64 i386 x86_64";
+			};
+			name = "Debug";
+		};
+		77418F46922677BB04ED38DD = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"ARCHS[sdk=iphoneos*]" = "armv7 arm64";
+				"ARCHS[sdk=iphonesimulator*]" = "i386 x86_64";
+				COPY_PHASE_STRIP = "NO";
+				DEBUG_INFORMATION_FORMAT = "dwarf";
+				ENABLE_BITCODE = "NO";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = "YES";
+				GCC_OPTIMIZATION_LEVEL = "0";
+				ONLY_ACTIVE_ARCH = "YES";
+				PRODUCT_NAME = "StoryTime_01";
+				"QMAKE_MAC_SDK_PATH[sdk=iphoneos*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.2.sdk";
+				"QMAKE_MAC_SDK_PATH[sdk=iphonesimulator*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.2.sdk";
+				"QMAKE_MAC_SDK_PLATFORM_PATH[sdk=iphoneos*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform";
+				"QMAKE_MAC_SDK_PLATFORM_PATH[sdk=iphonesimulator*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform";
+				QT_LIBRARY_SUFFIX = "_debug";
+				"QT_LIBRARY_SUFFIX[sdk=iphonesimulator*]" = "_iphonesimulator$(QT_LIBRARY_SUFFIX)";
+				SDKROOT = "iphonesimulator";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				PRODUCT_NAME = "StoryTime_01";
+			};
+			name = "Debug";
+		};
+		339EE1B2CC4FC24589A0EA95 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"ARCHS[sdk=iphoneos*]" = "armv7 arm64";
+				"ARCHS[sdk=iphonesimulator*]" = "i386 x86_64";
+				COPY_PHASE_STRIP = "YES";
+				ENABLE_BITCODE = "NO";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = "NO";
+				PRODUCT_NAME = "StoryTime_01";
+				"QMAKE_MAC_SDK_PATH[sdk=iphoneos*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.2.sdk";
+				"QMAKE_MAC_SDK_PATH[sdk=iphonesimulator*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.2.sdk";
+				"QMAKE_MAC_SDK_PLATFORM_PATH[sdk=iphoneos*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform";
+				"QMAKE_MAC_SDK_PLATFORM_PATH[sdk=iphonesimulator*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform";
+				QT_LIBRARY_SUFFIX = "";
+				"QT_LIBRARY_SUFFIX[sdk=iphonesimulator*]" = "_iphonesimulator$(QT_LIBRARY_SUFFIX)";
+				SDKROOT = "iphonesimulator";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				CC = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang";
+				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
+				INFOPLIST_FILE = "Info.plist";
+				SYMROOT = "/Users/zthunder/Documents/z-SourceTree/StoryTime/build-StoryTime_01-iphonesimulator_clang_Qt_5_5_0_for_iOS-Debug/";
+				DYLIB_CURRENT_VERSION = "1.0.0";
+				DYLIB_COMPATIBILITY_VERSION = "1.0";
+				IPHONEOS_DEPLOYMENT_TARGET = "5.1.1";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"../StoryTime_01",
+					".",
+					"/Users/zthunder/Qt/5.5/ios/mkspecs/macx-ios-clang/ios",
+					"../../../../Qt/5.5/ios/include",
+					"../../../../Qt/5.5/ios/include/QtWidgets",
+					"../../../../Qt/5.5/ios/include/QtGui",
+					"../../../../Qt/5.5/ios/include/QtSql",
+					"../../../../Qt/5.5/ios/include/QtCore",
+					".",
+					".",
+					"../../../../Qt/5.5/ios/mkspecs/macx-ios-clang");
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/zthunder/Qt/5.5/ios/plugins/platforms",
+					"/System/Library/Frameworks/",
+					"/Users/zthunder/Qt/5.5/ios/lib",
+					"/Users/zthunder/Qt/5.5/ios/plugins/imageformats",
+					"/Users/zthunder/Qt/5.5/ios/plugins/sqldrivers");
+				FRAMEWORK_SEARCH_PATHS = "";
+				OTHER_CFLAGS = (
+					"-pipe",
+					"-fvisibility=hidden",
+					"-fpascal-strings",
+					"-fmessage-length=0",
+					"-Wno-trigraphs",
+					"-Wreturn-type",
+					"-Wparentheses",
+					"-Wswitch",
+					"-Wno-unused-parameter",
+					"-Wunused-variable",
+					"-Wunused-value",
+					"-Wno-shorten-64-to-32",
+					"-Wno-sign-conversion",
+					"-fexceptions",
+					"-fasm-blocks",
+					"-Wno-missing-field-initializers",
+					"-Wno-missing-prototypes",
+					"-Wno-implicit-atomic-properties",
+					"-Wformat",
+					"-Wno-missing-braces",
+					"-Wno-unused-function",
+					"-Wno-unused-label",
+					"-Wuninitialized",
+					"-Wno-unknown-pragmas",
+					"-Wno-shadow",
+					"-Wno-four-char-constants",
+					"-Wno-sign-compare",
+					"-Wpointer-sign",
+					"-Wno-newline-eof",
+					"-Wdeprecated-declarations",
+					"-Winvalid-offsetof",
+					"-Wno-conversion",
+					"-g",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DDARWIN_NO_CARBON",
+					"-DQT_NO_PRINTER",
+					"-DQT_NO_PRINTDIALOG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_SQL_LIB",
+					"-DQT_CORE_LIB");
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pipe",
+					"-fvisibility=hidden",
+					"-fpascal-strings",
+					"-fmessage-length=0",
+					"-Wno-trigraphs",
+					"-Wreturn-type",
+					"-Wparentheses",
+					"-Wswitch",
+					"-Wno-unused-parameter",
+					"-Wunused-variable",
+					"-Wunused-value",
+					"-Wno-shorten-64-to-32",
+					"-Wno-sign-conversion",
+					"-fexceptions",
+					"-fasm-blocks",
+					"-Wno-missing-field-initializers",
+					"-Wno-missing-prototypes",
+					"-Wno-implicit-atomic-properties",
+					"-Wformat",
+					"-Wno-missing-braces",
+					"-Wno-unused-function",
+					"-Wno-unused-label",
+					"-Wuninitialized",
+					"-Wno-unknown-pragmas",
+					"-Wno-shadow",
+					"-Wno-four-char-constants",
+					"-Wno-sign-compare",
+					"-Wpointer-sign",
+					"-Wno-newline-eof",
+					"-Wdeprecated-declarations",
+					"-Winvalid-offsetof",
+					"-Wno-conversion",
+					"-fvisibility-inlines-hidden",
+					"-Wno-non-virtual-dtor",
+					"-Wno-overloaded-virtual",
+					"-Wno-exit-time-destructors",
+					"-g",
+					"-std=c++11",
+					"-stdlib=libc++",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DDARWIN_NO_CARBON",
+					"-DQT_NO_PRINTER",
+					"-DQT_NO_PRINTDIALOG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_SQL_LIB",
+					"-DQT_CORE_LIB");
+				OTHER_LDFLAGS = (
+						"-headerpad_max_install_names",
+						"-stdlib=libc++",
+						"-u",
+						"_qt_registerPlatformPlugin",
+						"-L/Users/zthunder/Qt/5.5/ios/plugins/platforms",
+						"-framework",
+						"UIKit",
+						"-framework",
+						"AssetsLibrary",
+						"-L/Users/zthunder/Qt/5.5/ios/lib",
+						"-framework",
+						"OpenGLES",
+						"-L/Users/zthunder/Qt/5.5/ios/plugins/imageformats",
+						"-L/Users/zthunder/Qt/5.5/ios/plugins/sqldrivers",
+						"-lz",
+						"-lm");
+				ARCHS = "armv7 arm64 i386 x86_64";
+			};
+			name = "Release";
+		};
+		6666AA5E688052234F6758D8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"ARCHS[sdk=iphoneos*]" = "armv7 arm64";
+				"ARCHS[sdk=iphonesimulator*]" = "i386 x86_64";
+				COPY_PHASE_STRIP = "YES";
+				ENABLE_BITCODE = "NO";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = "NO";
+				PRODUCT_NAME = "StoryTime_01";
+				"QMAKE_MAC_SDK_PATH[sdk=iphoneos*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.2.sdk";
+				"QMAKE_MAC_SDK_PATH[sdk=iphonesimulator*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.2.sdk";
+				"QMAKE_MAC_SDK_PLATFORM_PATH[sdk=iphoneos*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform";
+				"QMAKE_MAC_SDK_PLATFORM_PATH[sdk=iphonesimulator*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform";
+				QT_LIBRARY_SUFFIX = "";
+				"QT_LIBRARY_SUFFIX[sdk=iphonesimulator*]" = "_iphonesimulator$(QT_LIBRARY_SUFFIX)";
+				SDKROOT = "iphonesimulator";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				PRODUCT_NAME = "StoryTime_01";
+			};
+			name = "Release";
+		};
+		DAC4C1AA5EDEA1C85E9CA5E6 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"3AA6C32AC930069E80220CF1",
+				"339EE1B2CC4FC24589A0EA95");
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug";
+		};
+		6CC3B5D2136C7CD6A5CF5A59 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"77418F46922677BB04ED38DD",
+				"6666AA5E688052234F6758D8");
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug";
+		};
+		6DB9C3763D02B1415CD9D565 = {
+			hasScannedForEncodings = 1;
+			compatibilityVersion = "Xcode 3.2";
+			isa = PBXProject;
+			mainGroup = "E8C543AB96796ECAA2E65C57";
+			productRefGroup = "FE0A091FDBFB3E9C31B7A1BD";
+			buildConfigurationList = "DAC4C1AA5EDEA1C85E9CA5E6";
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"1A3058DB2D86750471777A63",
+				"48CF4EF2A76C9FC56505DB69");
+			attributes = {
+				TargetAttributes = {
+				};
+			};
+		};
+	};
+	rootObject = "6DB9C3763D02B1415CD9D565";
+}
