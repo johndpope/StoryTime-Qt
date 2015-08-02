@@ -37,9 +37,15 @@ void Login::on_BtnSignIn_released()
     else{
         QSqlQuery qry("select * from stunData where username='" + username + "' and password='" + password + "'" );
 
-        if(qry.next()){ // if valid, do something
-            //str = qry.value("username").toString();
+        if(qry.next()){ // if valid, do something    //str = qry.value("username").toString();
+
             ui->indicator->setText("Logining in...");
+            this->hide();
+            Entry en;
+            en.setModal(true);
+            en.exec();
+
+           // en.exec();
         }
         else{
              ui->indicator->setText("Invalid Username or/and Password");

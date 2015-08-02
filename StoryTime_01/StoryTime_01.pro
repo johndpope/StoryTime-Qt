@@ -13,11 +13,14 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        login.cpp
+        login.cpp \
+    entry.cpp
 
-HEADERS  += login.h
+HEADERS  += login.h \
+    entry.h
 
-FORMS    += login.ui
+FORMS    += login.ui \
+    entry.ui
 
 CONFIG += mobility
 MOBILITY = 

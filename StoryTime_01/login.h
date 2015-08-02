@@ -6,6 +6,8 @@
 #include <QtSql>
 #include <QtDebug>
 #include <QFileInfo>
+#include "entry.h"
+
 
 namespace Ui {
 class Login;
