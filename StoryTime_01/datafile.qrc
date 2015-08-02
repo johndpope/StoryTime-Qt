@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/DataFile">
+        <file alias="stunData">dummyData/stunData.sqlite</file>
+    </qresource>
+</RCC>

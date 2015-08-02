@@ -11,6 +11,7 @@ Login::Login(QWidget *parent) :
 
     loginData.setDatabaseName("/Users/zthunder/Documents/z-SourceTree/StoryTime/StoryTime_01/dummyData/stunData.sqlite");
 
+    //loginData.setDatabaseName("stunData");
     if (!loginData.open()){
         ui->indicator->setText("Failed");
     }
@@ -34,13 +35,16 @@ void Login::on_pushButton_released()
         ui->indicator->setText("Failed to open data file.\n");
     }
     else{
-        QSqlQuery qry("select * from stunData where username='"+username+"' and password='"+password+"'" );
-        QString str = "---";
+        QSqlQuery qry("select * from stunData where username='" + username + "' and password='" + password + "'" );
 
-        while(qry.next()){ // if valid, do something
+        if(qry.next()){ // if valid, do something
             //str = qry.value("username").toString();
+            ui->indicator->setText("Logining in...");
         }
-        ui->indicator->setText(str);
+        else{
+             ui->indicator->setText("Invalid Username or/and Password");
+        }
+
 
     }
 }
