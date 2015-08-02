@@ -30,9 +30,9 @@ public:
     QWidget *centralWidget;
     QGroupBox *SignInBox;
     QPushButton *BtnForget;
-    QPushButton *Btn_SignUp;
-    QPushButton *pushButton;
-    QWidget *widget;
+    QPushButton *BtnSignUp;
+    QPushButton *BtnSignIn;
+    QWidget *layoutWidget;
     QFormLayout *TextLayer;
     QLabel *LabelUsername;
     QLineEdit *EditUsername;
@@ -53,36 +53,36 @@ public:
         BtnForget = new QPushButton(SignInBox);
         BtnForget->setObjectName(QStringLiteral("BtnForget"));
         BtnForget->setGeometry(QRect(127, 150, 145, 32));
-        Btn_SignUp = new QPushButton(SignInBox);
-        Btn_SignUp->setObjectName(QStringLiteral("Btn_SignUp"));
-        Btn_SignUp->setGeometry(QRect(30, 150, 95, 32));
-        pushButton = new QPushButton(SignInBox);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(260, 80, 85, 32));
-        widget = new QWidget(SignInBox);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(30, 50, 231, 54));
-        TextLayer = new QFormLayout(widget);
+        BtnSignUp = new QPushButton(SignInBox);
+        BtnSignUp->setObjectName(QStringLiteral("BtnSignUp"));
+        BtnSignUp->setGeometry(QRect(30, 150, 95, 32));
+        BtnSignIn = new QPushButton(SignInBox);
+        BtnSignIn->setObjectName(QStringLiteral("BtnSignIn"));
+        BtnSignIn->setGeometry(QRect(260, 80, 85, 32));
+        layoutWidget = new QWidget(SignInBox);
+        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
+        layoutWidget->setGeometry(QRect(30, 50, 231, 54));
+        TextLayer = new QFormLayout(layoutWidget);
         TextLayer->setSpacing(6);
         TextLayer->setContentsMargins(11, 11, 11, 11);
         TextLayer->setObjectName(QStringLiteral("TextLayer"));
         TextLayer->setContentsMargins(0, 0, 0, 0);
-        LabelUsername = new QLabel(widget);
+        LabelUsername = new QLabel(layoutWidget);
         LabelUsername->setObjectName(QStringLiteral("LabelUsername"));
 
         TextLayer->setWidget(0, QFormLayout::LabelRole, LabelUsername);
 
-        EditUsername = new QLineEdit(widget);
+        EditUsername = new QLineEdit(layoutWidget);
         EditUsername->setObjectName(QStringLiteral("EditUsername"));
 
         TextLayer->setWidget(0, QFormLayout::FieldRole, EditUsername);
 
-        LabelPassword = new QLabel(widget);
+        LabelPassword = new QLabel(layoutWidget);
         LabelPassword->setObjectName(QStringLiteral("LabelPassword"));
 
         TextLayer->setWidget(1, QFormLayout::LabelRole, LabelPassword);
 
-        EditPassword = new QLineEdit(widget);
+        EditPassword = new QLineEdit(layoutWidget);
         EditPassword->setObjectName(QStringLiteral("EditPassword"));
 
         TextLayer->setWidget(1, QFormLayout::FieldRole, EditPassword);
@@ -102,8 +102,8 @@ public:
         Login->setWindowTitle(QApplication::translate("Login", "Login", 0));
         SignInBox->setTitle(QApplication::translate("Login", "Sign In", 0));
         BtnForget->setText(QApplication::translate("Login", "Forget Password", 0));
-        Btn_SignUp->setText(QApplication::translate("Login", "Sign Up!", 0));
-        pushButton->setText(QApplication::translate("Login", "Sign In", 0));
+        BtnSignUp->setText(QApplication::translate("Login", "Sign Up!", 0));
+        BtnSignIn->setText(QApplication::translate("Login", "Sign In", 0));
         LabelUsername->setText(QApplication::translate("Login", "Username ", 0));
         LabelPassword->setText(QApplication::translate("Login", "Password", 0));
         indicator->setText(QApplication::translate("Login", "     File -- ", 0));

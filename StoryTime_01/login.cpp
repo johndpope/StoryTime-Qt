@@ -25,7 +25,7 @@ Login::~Login()
     delete ui;
 }
 
-void Login::on_pushButton_released()
+void Login::on_BtnSignIn_released()
 {
     QString username, password;
     username = ui->EditUsername->text();
@@ -47,9 +47,4 @@ void Login::on_pushButton_released()
 
 
     }
-}
-
-void Login::on_pushButton_clicked()
-{
-    on_pushButton_released();
 }

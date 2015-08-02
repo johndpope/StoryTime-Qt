@@ -20,9 +20,9 @@ public:
     ~Login();
 
 private slots:
-    void on_pushButton_released();
 
-    void on_pushButton_clicked();
+
+    void on_BtnSignIn_released();
 
 private:
     Ui::Login *ui;
