@@ -54,3 +54,8 @@ void Login::on_BtnSignIn_released()
 
     }
 }
+
+void Login::on_BtnSignUp_released()
+{
+
+}

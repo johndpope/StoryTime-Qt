@@ -1,16 +1,16 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'entry.h'
+** Meta object code from reading C++ file 'writestory.h'
 **
 ** Created by: The Qt Meta Object Compiler version 67 (Qt 5.5.0)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../StoryTime_01/main/entry.h"
+#include "../StoryTime_01/Write/writestory.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'entry.h' doesn't include <QObject>."
+#error "The header file 'writestory.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
 #error "This file was generated using the moc from 5.5.0. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -18,35 +18,36 @@
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
-struct qt_meta_stringdata_Entry_t {
-    QByteArrayData data[4];
-    char stringdata0[48];
+struct qt_meta_stringdata_WriteStory_t {
+    QByteArrayData data[5];
+    char stringdata0[74];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_Entry_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_WriteStory_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_Entry_t qt_meta_stringdata_Entry = {
+static const qt_meta_stringdata_WriteStory_t qt_meta_stringdata_WriteStory = {
     {
-QT_MOC_LITERAL(0, 0, 5), // "Entry"
-QT_MOC_LITERAL(1, 6, 20), // "on_BtnWrite_released"
-QT_MOC_LITERAL(2, 27, 0), // ""
-QT_MOC_LITERAL(3, 28, 19) // "on_BtnRead_released"
+QT_MOC_LITERAL(0, 0, 10), // "WriteStory"
+QT_MOC_LITERAL(1, 11, 20), // "on_BtnFetch_released"
+QT_MOC_LITERAL(2, 32, 0), // ""
+QT_MOC_LITERAL(3, 33, 20), // "on_BtnWrite_released"
+QT_MOC_LITERAL(4, 54, 19) // "on_BtnBack_released"
 
     },
-    "Entry\0on_BtnWrite_released\0\0"
-    "on_BtnRead_released"
+    "WriteStory\0on_BtnFetch_released\0\0"
+    "on_BtnWrite_released\0on_BtnBack_released"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_Entry[] = {
+static const uint qt_meta_data_WriteStory[] = {
 
  // content:
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -54,62 +55,65 @@ static const uint qt_meta_data_Entry[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   24,    2, 0x08 /* Private */,
-       3,    0,   25,    2, 0x08 /* Private */,
+       1,    0,   29,    2, 0x08 /* Private */,
+       3,    0,   30,    2, 0x08 /* Private */,
+       4,    0,   31,    2, 0x08 /* Private */,
 
  // slots: parameters
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
 };
 
-void Entry::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void WriteStory::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        Entry *_t = static_cast<Entry *>(_o);
+        WriteStory *_t = static_cast<WriteStory *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_BtnWrite_released(); break;
-        case 1: _t->on_BtnRead_released(); break;
+        case 0: _t->on_BtnFetch_released(); break;
+        case 1: _t->on_BtnWrite_released(); break;
+        case 2: _t->on_BtnBack_released(); break;
         default: ;
         }
     }
     Q_UNUSED(_a);
 }
 
-const QMetaObject Entry::staticMetaObject = {
-    { &QDialog::staticMetaObject, qt_meta_stringdata_Entry.data,
-      qt_meta_data_Entry,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
+const QMetaObject WriteStory::staticMetaObject = {
+    { &QDialog::staticMetaObject, qt_meta_stringdata_WriteStory.data,
+      qt_meta_data_WriteStory,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
 };
 
 
-const QMetaObject *Entry::metaObject() const
+const QMetaObject *WriteStory::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *Entry::qt_metacast(const char *_clname)
+void *WriteStory::qt_metacast(const char *_clname)
 {
     if (!_clname) return Q_NULLPTR;
-    if (!strcmp(_clname, qt_meta_stringdata_Entry.stringdata0))
-        return static_cast<void*>(const_cast< Entry*>(this));
+    if (!strcmp(_clname, qt_meta_stringdata_WriteStory.stringdata0))
+        return static_cast<void*>(const_cast< WriteStory*>(this));
     return QDialog::qt_metacast(_clname);
 }
 
-int Entry::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int WriteStory::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QDialog::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 3;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 3)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 2;
+        _id -= 3;
     }
     return _id;
 }

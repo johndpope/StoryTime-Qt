@@ -48,16 +48,26 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = ../StoryTime_01/main.cpp \
-		../StoryTime_01/login.cpp \
-		../StoryTime_01/entry.cpp moc_login.cpp \
-		moc_entry.cpp
+SOURCES       = ../StoryTime_01/main/main.cpp \
+		../StoryTime_01/main/entry.cpp \
+		../StoryTime_01/main/login.cpp \
+		../StoryTime_01/Write/writestory.cpp \
+		../StoryTime_01/Write/writingforoptions.cpp moc_entry.cpp \
+		moc_login.cpp \
+		moc_writestory.cpp \
+		moc_writingforoptions.cpp
 OBJECTS       = main.o \
-		login.o \
 		entry.o \
+		login.o \
+		writestory.o \
+		writingforoptions.o \
+		moc_entry.o \
 		moc_login.o \
-		moc_entry.o
-DIST          = ../../../../Qt/5.5/clang_64/mkspecs/features/spec_pre.prf \
+		moc_writestory.o \
+		moc_writingforoptions.o
+DIST          = ../StoryTime_01/Background \
+		../StoryTime_01/WritePart \
+		../../../../Qt/5.5/clang_64/mkspecs/features/spec_pre.prf \
 		../../../../Qt/5.5/clang_64/mkspecs/qdevice.pri \
 		../../../../Qt/5.5/clang_64/mkspecs/features/device_config.prf \
 		../../../../Qt/5.5/clang_64/mkspecs/common/unix.conf \
@@ -195,10 +205,14 @@ DIST          = ../../../../Qt/5.5/clang_64/mkspecs/features/spec_pre.prf \
 		../../../../Qt/5.5/clang_64/mkspecs/features/exceptions.prf \
 		../../../../Qt/5.5/clang_64/mkspecs/features/yacc.prf \
 		../../../../Qt/5.5/clang_64/mkspecs/features/lex.prf \
-		../StoryTime_01/StoryTime_01.pro ../StoryTime_01/login.h \
-		../StoryTime_01/entry.h ../StoryTime_01/main.cpp \
-		../StoryTime_01/login.cpp \
-		../StoryTime_01/entry.cpp
+		../StoryTime_01/StoryTime_01.pro ../StoryTime_01/main/entry.h \
+		../StoryTime_01/main/login.h \
+		../StoryTime_01/Write/writestory.h \
+		../StoryTime_01/Write/writingforoptions.h ../StoryTime_01/main/main.cpp \
+		../StoryTime_01/main/entry.cpp \
+		../StoryTime_01/main/login.cpp \
+		../StoryTime_01/Write/writestory.cpp \
+		../StoryTime_01/Write/writingforoptions.cpp
 QMAKE_TARGET  = StoryTime_01
 DESTDIR       = #avoid trailing-slash linebreak
 TARGET        = StoryTime_01.app/Contents/MacOS/StoryTime_01
@@ -236,7 +250,7 @@ first: all
 
 ####### Build rules
 
-$(TARGET): ui_login.h ui_entry.h $(OBJECTS)  
+$(TARGET): ui_entry.h ui_login.h ui_writestory.h ui_writingforoptions.h $(OBJECTS)  
 	@test -d StoryTime_01.app/Contents/MacOS/ || mkdir -p StoryTime_01.app/Contents/MacOS/
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
@@ -556,9 +570,9 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../StoryTime_01/login.h ../StoryTime_01/entry.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../StoryTime_01/main.cpp ../StoryTime_01/login.cpp ../StoryTime_01/entry.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../StoryTime_01/login.ui ../StoryTime_01/entry.ui $(DISTDIR)/
+	$(COPY_FILE) --parents ../StoryTime_01/main/entry.h ../StoryTime_01/main/login.h ../StoryTime_01/Write/writestory.h ../StoryTime_01/Write/writingforoptions.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../StoryTime_01/main/main.cpp ../StoryTime_01/main/entry.cpp ../StoryTime_01/main/login.cpp ../StoryTime_01/Write/writestory.cpp ../StoryTime_01/Write/writingforoptions.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../StoryTime_01/main/entry.ui ../StoryTime_01/main/login.ui ../StoryTime_01/Write/writestory.ui ../StoryTime_01/Write/writingforoptions.ui $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -584,9 +598,16 @@ compiler_objective_c_make_all:
 compiler_objective_c_clean:
 compiler_rcc_make_all:
 compiler_rcc_clean:
-compiler_moc_header_make_all: moc_login.cpp moc_entry.cpp
+compiler_moc_header_make_all: moc_entry.cpp moc_login.cpp moc_writestory.cpp moc_writingforoptions.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_login.cpp moc_entry.cpp
+	-$(DEL_FILE) moc_entry.cpp moc_login.cpp moc_writestory.cpp moc_writingforoptions.cpp
+moc_entry.cpp: ../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
+		../StoryTime_01/Write/writestory.h \
+		../StoryTime_01/Write/writingforoptions.h \
+		../StoryTime_01/main/entry.h
+	/Users/zthunder/Qt/5.5/clang_64/bin/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -I/Users/zthunder/Qt/5.5/clang_64/mkspecs/macx-clang -I/Users/zthunder/Documents/z-SourceTree/StoryTime/StoryTime_01 -I/Users/zthunder/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtGui.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtSql.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtCore.framework/Headers -I. -F/Users/zthunder/Qt/5.5/clang_64/lib ../StoryTime_01/main/entry.h -o moc_entry.cpp
+
 moc_login.cpp: ../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QMainWindow \
 		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h \
 		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/QtSql \
@@ -609,27 +630,41 @@ moc_login.cpp: ../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QMain
 		../../../../Qt/5.5/clang_64/lib/QtCore.framework/Headers/qdebug.h \
 		../../../../Qt/5.5/clang_64/lib/QtCore.framework/Headers/QFileInfo \
 		../../../../Qt/5.5/clang_64/lib/QtCore.framework/Headers/qfileinfo.h \
-		../StoryTime_01/entry.h \
+		../StoryTime_01/main/entry.h \
 		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QDialog \
 		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
-		../StoryTime_01/login.h
-	/Users/zthunder/Qt/5.5/clang_64/bin/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -I/Users/zthunder/Qt/5.5/clang_64/mkspecs/macx-clang -I/Users/zthunder/Documents/z-SourceTree/StoryTime/StoryTime_01 -I/Users/zthunder/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtGui.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtSql.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtCore.framework/Headers -I. -F/Users/zthunder/Qt/5.5/clang_64/lib ../StoryTime_01/login.h -o moc_login.cpp
+		../StoryTime_01/Write/writestory.h \
+		../StoryTime_01/Write/writingforoptions.h \
+		../StoryTime_01/main/login.h
+	/Users/zthunder/Qt/5.5/clang_64/bin/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -I/Users/zthunder/Qt/5.5/clang_64/mkspecs/macx-clang -I/Users/zthunder/Documents/z-SourceTree/StoryTime/StoryTime_01 -I/Users/zthunder/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtGui.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtSql.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtCore.framework/Headers -I. -F/Users/zthunder/Qt/5.5/clang_64/lib ../StoryTime_01/main/login.h -o moc_login.cpp
 
-moc_entry.cpp: ../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QDialog \
+moc_writestory.cpp: ../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QDialog \
 		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
-		../StoryTime_01/entry.h
-	/Users/zthunder/Qt/5.5/clang_64/bin/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -I/Users/zthunder/Qt/5.5/clang_64/mkspecs/macx-clang -I/Users/zthunder/Documents/z-SourceTree/StoryTime/StoryTime_01 -I/Users/zthunder/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtGui.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtSql.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtCore.framework/Headers -I. -F/Users/zthunder/Qt/5.5/clang_64/lib ../StoryTime_01/entry.h -o moc_entry.cpp
+		../StoryTime_01/Write/writingforoptions.h \
+		../StoryTime_01/Write/writestory.h
+	/Users/zthunder/Qt/5.5/clang_64/bin/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -I/Users/zthunder/Qt/5.5/clang_64/mkspecs/macx-clang -I/Users/zthunder/Documents/z-SourceTree/StoryTime/StoryTime_01 -I/Users/zthunder/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtGui.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtSql.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtCore.framework/Headers -I. -F/Users/zthunder/Qt/5.5/clang_64/lib ../StoryTime_01/Write/writestory.h -o moc_writestory.cpp
+
+moc_writingforoptions.cpp: ../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
+		../StoryTime_01/Write/writingforoptions.h
+	/Users/zthunder/Qt/5.5/clang_64/bin/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -I/Users/zthunder/Qt/5.5/clang_64/mkspecs/macx-clang -I/Users/zthunder/Documents/z-SourceTree/StoryTime/StoryTime_01 -I/Users/zthunder/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtGui.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtSql.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtCore.framework/Headers -I. -F/Users/zthunder/Qt/5.5/clang_64/lib ../StoryTime_01/Write/writingforoptions.h -o moc_writingforoptions.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_login.h ui_entry.h
+compiler_uic_make_all: ui_entry.h ui_login.h ui_writestory.h ui_writingforoptions.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_login.h ui_entry.h
-ui_login.h: ../StoryTime_01/login.ui
-	/Users/zthunder/Qt/5.5/clang_64/bin/uic ../StoryTime_01/login.ui -o ui_login.h
+	-$(DEL_FILE) ui_entry.h ui_login.h ui_writestory.h ui_writingforoptions.h
+ui_entry.h: ../StoryTime_01/main/entry.ui
+	/Users/zthunder/Qt/5.5/clang_64/bin/uic ../StoryTime_01/main/entry.ui -o ui_entry.h
 
-ui_entry.h: ../StoryTime_01/entry.ui
-	/Users/zthunder/Qt/5.5/clang_64/bin/uic ../StoryTime_01/entry.ui -o ui_entry.h
+ui_login.h: ../StoryTime_01/main/login.ui
+	/Users/zthunder/Qt/5.5/clang_64/bin/uic ../StoryTime_01/main/login.ui -o ui_login.h
+
+ui_writestory.h: ../StoryTime_01/Write/writestory.ui
+	/Users/zthunder/Qt/5.5/clang_64/bin/uic ../StoryTime_01/Write/writestory.ui -o ui_writestory.h
+
+ui_writingforoptions.h: ../StoryTime_01/Write/writingforoptions.ui
+	/Users/zthunder/Qt/5.5/clang_64/bin/uic ../StoryTime_01/Write/writingforoptions.ui -o ui_writingforoptions.h
 
 compiler_rez_source_make_all:
 compiler_rez_source_clean:
@@ -643,7 +678,7 @@ compiler_clean: compiler_moc_header_clean compiler_uic_clean
 
 ####### Compile
 
-main.o: ../StoryTime_01/main.cpp ../StoryTime_01/login.h \
+main.o: ../StoryTime_01/main/main.cpp ../StoryTime_01/main/login.h \
 		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QMainWindow \
 		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h \
 		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/QtSql \
@@ -666,14 +701,24 @@ main.o: ../StoryTime_01/main.cpp ../StoryTime_01/login.h \
 		../../../../Qt/5.5/clang_64/lib/QtCore.framework/Headers/qdebug.h \
 		../../../../Qt/5.5/clang_64/lib/QtCore.framework/Headers/QFileInfo \
 		../../../../Qt/5.5/clang_64/lib/QtCore.framework/Headers/qfileinfo.h \
-		../StoryTime_01/entry.h \
+		../StoryTime_01/main/entry.h \
 		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QDialog \
 		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
+		../StoryTime_01/Write/writestory.h \
+		../StoryTime_01/Write/writingforoptions.h \
 		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QApplication \
 		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qapplication.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../StoryTime_01/main.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../StoryTime_01/main/main.cpp
 
-login.o: ../StoryTime_01/login.cpp ../StoryTime_01/login.h \
+entry.o: ../StoryTime_01/main/entry.cpp ../StoryTime_01/main/entry.h \
+		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
+		../StoryTime_01/Write/writestory.h \
+		../StoryTime_01/Write/writingforoptions.h \
+		ui_entry.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o entry.o ../StoryTime_01/main/entry.cpp
+
+login.o: ../StoryTime_01/main/login.cpp ../StoryTime_01/main/login.h \
 		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QMainWindow \
 		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h \
 		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/QtSql \
@@ -696,23 +741,38 @@ login.o: ../StoryTime_01/login.cpp ../StoryTime_01/login.h \
 		../../../../Qt/5.5/clang_64/lib/QtCore.framework/Headers/qdebug.h \
 		../../../../Qt/5.5/clang_64/lib/QtCore.framework/Headers/QFileInfo \
 		../../../../Qt/5.5/clang_64/lib/QtCore.framework/Headers/qfileinfo.h \
-		../StoryTime_01/entry.h \
+		../StoryTime_01/main/entry.h \
 		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QDialog \
 		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
+		../StoryTime_01/Write/writestory.h \
+		../StoryTime_01/Write/writingforoptions.h \
 		ui_login.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o login.o ../StoryTime_01/login.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o login.o ../StoryTime_01/main/login.cpp
 
-entry.o: ../StoryTime_01/entry.cpp ../StoryTime_01/entry.h \
+writestory.o: ../StoryTime_01/Write/writestory.cpp ../StoryTime_01/Write/writestory.h \
 		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QDialog \
 		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
-		ui_entry.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o entry.o ../StoryTime_01/entry.cpp
+		../StoryTime_01/Write/writingforoptions.h \
+		ui_writestory.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o writestory.o ../StoryTime_01/Write/writestory.cpp
+
+writingforoptions.o: ../StoryTime_01/Write/writingforoptions.cpp ../StoryTime_01/Write/writingforoptions.h \
+		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
+		ui_writingforoptions.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o writingforoptions.o ../StoryTime_01/Write/writingforoptions.cpp
+
+moc_entry.o: moc_entry.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_entry.o moc_entry.cpp
 
 moc_login.o: moc_login.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_login.o moc_login.cpp
 
-moc_entry.o: moc_entry.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_entry.o moc_entry.cpp
+moc_writestory.o: moc_writestory.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_writestory.o moc_writestory.cpp
+
+moc_writingforoptions.o: moc_writingforoptions.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_writingforoptions.o moc_writingforoptions.cpp
 
 ####### Install
 

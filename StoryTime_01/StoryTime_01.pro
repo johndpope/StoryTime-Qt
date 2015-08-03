@@ -12,20 +12,31 @@ TARGET = StoryTime_01
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-        login.cpp \
-    entry.cpp
+SOURCES +=\
+    main/main.cpp \
+    main/entry.cpp \
+    main/login.cpp \
+    Write/writestory.cpp \
+    Write/writingforoptions.cpp
 
-HEADERS  += login.h \
-    entry.h
+HEADERS  += \
+    main/entry.h \
+    main/login.h \
+    Write/writestory.h \
+    Write/writingforoptions.h
 
-FORMS    += login.ui \
-    entry.ui
+FORMS    += \
+    main/entry.ui \
+    main/login.ui \
+    Write/writestory.ui \
+    Write/writingforoptions.ui
 
 CONFIG += mobility
 MOBILITY = 
 
-DISTFILES +=
+DISTFILES += \
+    Background \
+    WritePart
 
 RESOURCES +=
 

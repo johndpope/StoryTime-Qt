@@ -26,6 +26,8 @@ private slots:
 
     void on_BtnSignIn_released();
 
+    void on_BtnSignUp_released();
+
 private:
     Ui::Login *ui;
     QSqlDatabase loginData; // phone id + password
