@@ -17,19 +17,22 @@ SOURCES +=\
     main/entry.cpp \
     main/login.cpp \
     Write/writestory.cpp \
-    Write/writingforoptions.cpp
+    Write/writingforoptions.cpp \
+    Read/readstory.cpp
 
 HEADERS  += \
     main/entry.h \
     main/login.h \
     Write/writestory.h \
-    Write/writingforoptions.h
+    Write/writingforoptions.h \
+    Read/readstory.h
 
 FORMS    += \
     main/entry.ui \
     main/login.ui \
     Write/writestory.ui \
-    Write/writingforoptions.ui
+    Write/writingforoptions.ui \
+    Read/readstory.ui
 
 CONFIG += mobility
 MOBILITY = 

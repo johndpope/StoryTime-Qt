@@ -4,6 +4,8 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+
+    // display a logo for couple seconds. or in login UI
     Login w;
     w.show();
 

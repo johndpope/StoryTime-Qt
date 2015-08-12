@@ -57,5 +57,17 @@ void Login::on_BtnSignIn_released()
 
 void Login::on_BtnSignUp_released()
 {
+    // sign up, need a sign up interface
+    // username --> unique
+    // password
+    // confirm password
+    // email for reset password.
 
+    // sign in and then go into entry UI.
+}
+
+void Login::on_BtnForget_released()
+{
+    // email address, after email is input, ask for codes. If it is temernated or out of time. give a warning message.
+    // send an auto message (codes etc) to reset the password
 }

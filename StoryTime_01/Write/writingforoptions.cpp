@@ -25,6 +25,7 @@ void WritingForOptions::on_BtnSetOption_released()
 
 void WritingForOptions::on_BtnSetOption1_released()
 {
+    // TODO:
     // if word count > 500, can not set option
 
     // set option1 in a window
@@ -32,15 +33,11 @@ void WritingForOptions::on_BtnSetOption1_released()
 
 void WritingForOptions::on_BtnSetOption2_released()
 {
+    // TODO:
     // if word count > 500, can not set option
 
     // set option2 in a window
 }
-
-//void WritingForOptions::on_BtnSend_released()
-//{
-//    // push it back to Queue.
-//}
 
 void WritingForOptions::on_EditWriting_textChanged()
 {
@@ -48,7 +45,16 @@ void WritingForOptions::on_EditWriting_textChanged()
 
     QString wordCount = QString::number(content.size());
     ui->LabelCountWords->setText(wordCount);
+
+    // TODO:
     if (content.size() > 500){
         // do something to warn.
     }
+}
+
+void WritingForOptions::on_BtnSend_released()
+{
+    // TODO:
+    // append the content/options to the story,
+    // push it back to Queue.
 }

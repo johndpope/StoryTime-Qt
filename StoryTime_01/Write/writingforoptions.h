@@ -28,6 +28,8 @@ private slots:
 
     void on_EditWriting_textChanged();
 
+    void on_BtnSend_released();
+
 private:
     Ui::WritingForOptions *ui;
 };
