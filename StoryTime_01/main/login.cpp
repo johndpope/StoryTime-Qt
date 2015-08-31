@@ -7,9 +7,12 @@ Login::Login(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    //signUpForm = new SignUpForm();
+
     loginData = QSqlDatabase::addDatabase("QSQLITE");
 
     loginData.setDatabaseName("/Users/zthunder/Documents/z-SourceTree/StoryTime/StoryTime_01/dummyData/stunData.sqlite");
+
 
     //loginData.setDatabaseName("stunData");
     if (!loginData.open()){
@@ -57,6 +60,11 @@ void Login::on_BtnSignIn_released()
 
 void Login::on_BtnSignUp_released()
 {
+    //this->hide();
+    signUp = new SignUp(loginData);
+    signUp->show();
+
+
     // sign up, need a sign up interface
     // username --> unique
     // password
@@ -71,3 +79,5 @@ void Login::on_BtnForget_released()
     // email address, after email is input, ask for codes. If it is temernated or out of time. give a warning message.
     // send an auto message (codes etc) to reset the password
 }
+
+

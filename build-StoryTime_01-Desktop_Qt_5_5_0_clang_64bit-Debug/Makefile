@@ -52,19 +52,33 @@ SOURCES       = ../StoryTime_01/main/main.cpp \
 		../StoryTime_01/main/entry.cpp \
 		../StoryTime_01/main/login.cpp \
 		../StoryTime_01/Write/writestory.cpp \
-		../StoryTime_01/Write/writingforoptions.cpp moc_entry.cpp \
+		../StoryTime_01/Write/writingforoptions.cpp \
+		../StoryTime_01/Read/readstory.cpp \
+		../StoryTime_01/users.cpp \
+		../StoryTime_01/storydata.cpp \
+		../StoryTime_01/options.cpp \
+		../StoryTime_01/signup.cpp moc_entry.cpp \
 		moc_login.cpp \
 		moc_writestory.cpp \
-		moc_writingforoptions.cpp
+		moc_writingforoptions.cpp \
+		moc_readstory.cpp \
+		moc_signup.cpp
 OBJECTS       = main.o \
 		entry.o \
 		login.o \
 		writestory.o \
 		writingforoptions.o \
+		readstory.o \
+		users.o \
+		storydata.o \
+		options.o \
+		signup.o \
 		moc_entry.o \
 		moc_login.o \
 		moc_writestory.o \
-		moc_writingforoptions.o
+		moc_writingforoptions.o \
+		moc_readstory.o \
+		moc_signup.o
 DIST          = ../StoryTime_01/Background \
 		../StoryTime_01/WritePart \
 		../../../../Qt/5.5/clang_64/mkspecs/features/spec_pre.prf \
@@ -208,11 +222,21 @@ DIST          = ../StoryTime_01/Background \
 		../StoryTime_01/StoryTime_01.pro ../StoryTime_01/main/entry.h \
 		../StoryTime_01/main/login.h \
 		../StoryTime_01/Write/writestory.h \
-		../StoryTime_01/Write/writingforoptions.h ../StoryTime_01/main/main.cpp \
+		../StoryTime_01/Write/writingforoptions.h \
+		../StoryTime_01/Read/readstory.h \
+		../StoryTime_01/users.h \
+		../StoryTime_01/storydata.h \
+		../StoryTime_01/options.h \
+		../StoryTime_01/signup.h ../StoryTime_01/main/main.cpp \
 		../StoryTime_01/main/entry.cpp \
 		../StoryTime_01/main/login.cpp \
 		../StoryTime_01/Write/writestory.cpp \
-		../StoryTime_01/Write/writingforoptions.cpp
+		../StoryTime_01/Write/writingforoptions.cpp \
+		../StoryTime_01/Read/readstory.cpp \
+		../StoryTime_01/users.cpp \
+		../StoryTime_01/storydata.cpp \
+		../StoryTime_01/options.cpp \
+		../StoryTime_01/signup.cpp
 QMAKE_TARGET  = StoryTime_01
 DESTDIR       = #avoid trailing-slash linebreak
 TARGET        = StoryTime_01.app/Contents/MacOS/StoryTime_01
@@ -250,7 +274,7 @@ first: all
 
 ####### Build rules
 
-$(TARGET): ui_entry.h ui_login.h ui_writestory.h ui_writingforoptions.h $(OBJECTS)  
+$(TARGET): ui_entry.h ui_login.h ui_writestory.h ui_writingforoptions.h ui_readstory.h ui_signup.h $(OBJECTS)  
 	@test -d StoryTime_01.app/Contents/MacOS/ || mkdir -p StoryTime_01.app/Contents/MacOS/
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
@@ -570,9 +594,9 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../StoryTime_01/main/entry.h ../StoryTime_01/main/login.h ../StoryTime_01/Write/writestory.h ../StoryTime_01/Write/writingforoptions.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../StoryTime_01/main/main.cpp ../StoryTime_01/main/entry.cpp ../StoryTime_01/main/login.cpp ../StoryTime_01/Write/writestory.cpp ../StoryTime_01/Write/writingforoptions.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../StoryTime_01/main/entry.ui ../StoryTime_01/main/login.ui ../StoryTime_01/Write/writestory.ui ../StoryTime_01/Write/writingforoptions.ui $(DISTDIR)/
+	$(COPY_FILE) --parents ../StoryTime_01/main/entry.h ../StoryTime_01/main/login.h ../StoryTime_01/Write/writestory.h ../StoryTime_01/Write/writingforoptions.h ../StoryTime_01/Read/readstory.h ../StoryTime_01/users.h ../StoryTime_01/storydata.h ../StoryTime_01/options.h ../StoryTime_01/signup.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../StoryTime_01/main/main.cpp ../StoryTime_01/main/entry.cpp ../StoryTime_01/main/login.cpp ../StoryTime_01/Write/writestory.cpp ../StoryTime_01/Write/writingforoptions.cpp ../StoryTime_01/Read/readstory.cpp ../StoryTime_01/users.cpp ../StoryTime_01/storydata.cpp ../StoryTime_01/options.cpp ../StoryTime_01/signup.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../StoryTime_01/main/entry.ui ../StoryTime_01/main/login.ui ../StoryTime_01/Write/writestory.ui ../StoryTime_01/Write/writingforoptions.ui ../StoryTime_01/Read/readstory.ui ../StoryTime_01/signup.ui $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -598,9 +622,9 @@ compiler_objective_c_make_all:
 compiler_objective_c_clean:
 compiler_rcc_make_all:
 compiler_rcc_clean:
-compiler_moc_header_make_all: moc_entry.cpp moc_login.cpp moc_writestory.cpp moc_writingforoptions.cpp
+compiler_moc_header_make_all: moc_entry.cpp moc_login.cpp moc_writestory.cpp moc_writingforoptions.cpp moc_readstory.cpp moc_signup.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_entry.cpp moc_login.cpp moc_writestory.cpp moc_writingforoptions.cpp
+	-$(DEL_FILE) moc_entry.cpp moc_login.cpp moc_writestory.cpp moc_writingforoptions.cpp moc_readstory.cpp moc_signup.cpp
 moc_entry.cpp: ../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QDialog \
 		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
 		../StoryTime_01/Write/writestory.h \
@@ -635,6 +659,7 @@ moc_login.cpp: ../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QMain
 		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
 		../StoryTime_01/Write/writestory.h \
 		../StoryTime_01/Write/writingforoptions.h \
+		../StoryTime_01/signup.h \
 		../StoryTime_01/main/login.h
 	/Users/zthunder/Qt/5.5/clang_64/bin/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -I/Users/zthunder/Qt/5.5/clang_64/mkspecs/macx-clang -I/Users/zthunder/Documents/z-SourceTree/StoryTime/StoryTime_01 -I/Users/zthunder/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtGui.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtSql.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtCore.framework/Headers -I. -F/Users/zthunder/Qt/5.5/clang_64/lib ../StoryTime_01/main/login.h -o moc_login.cpp
 
@@ -649,11 +674,37 @@ moc_writingforoptions.cpp: ../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/H
 		../StoryTime_01/Write/writingforoptions.h
 	/Users/zthunder/Qt/5.5/clang_64/bin/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -I/Users/zthunder/Qt/5.5/clang_64/mkspecs/macx-clang -I/Users/zthunder/Documents/z-SourceTree/StoryTime/StoryTime_01 -I/Users/zthunder/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtGui.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtSql.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtCore.framework/Headers -I. -F/Users/zthunder/Qt/5.5/clang_64/lib ../StoryTime_01/Write/writingforoptions.h -o moc_writingforoptions.cpp
 
+moc_readstory.cpp: ../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
+		../StoryTime_01/Read/readstory.h
+	/Users/zthunder/Qt/5.5/clang_64/bin/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -I/Users/zthunder/Qt/5.5/clang_64/mkspecs/macx-clang -I/Users/zthunder/Documents/z-SourceTree/StoryTime/StoryTime_01 -I/Users/zthunder/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtGui.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtSql.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtCore.framework/Headers -I. -F/Users/zthunder/Qt/5.5/clang_64/lib ../StoryTime_01/Read/readstory.h -o moc_readstory.cpp
+
+moc_signup.cpp: ../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/QtSql \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsql.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqldriver.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqldriverplugin.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlerror.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlfield.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlindex.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlquery.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlrecord.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlresult.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlrelationaldelegate.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlrelationaltablemodel.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqltablemodel.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qtsqlversion.h \
+		../StoryTime_01/signup.h
+	/Users/zthunder/Qt/5.5/clang_64/bin/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -I/Users/zthunder/Qt/5.5/clang_64/mkspecs/macx-clang -I/Users/zthunder/Documents/z-SourceTree/StoryTime/StoryTime_01 -I/Users/zthunder/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtGui.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtSql.framework/Headers -I/Users/zthunder/Qt/5.5/clang_64/lib/QtCore.framework/Headers -I. -F/Users/zthunder/Qt/5.5/clang_64/lib ../StoryTime_01/signup.h -o moc_signup.cpp
+
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_entry.h ui_login.h ui_writestory.h ui_writingforoptions.h
+compiler_uic_make_all: ui_entry.h ui_login.h ui_writestory.h ui_writingforoptions.h ui_readstory.h ui_signup.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_entry.h ui_login.h ui_writestory.h ui_writingforoptions.h
+	-$(DEL_FILE) ui_entry.h ui_login.h ui_writestory.h ui_writingforoptions.h ui_readstory.h ui_signup.h
 ui_entry.h: ../StoryTime_01/main/entry.ui
 	/Users/zthunder/Qt/5.5/clang_64/bin/uic ../StoryTime_01/main/entry.ui -o ui_entry.h
 
@@ -665,6 +716,12 @@ ui_writestory.h: ../StoryTime_01/Write/writestory.ui
 
 ui_writingforoptions.h: ../StoryTime_01/Write/writingforoptions.ui
 	/Users/zthunder/Qt/5.5/clang_64/bin/uic ../StoryTime_01/Write/writingforoptions.ui -o ui_writingforoptions.h
+
+ui_readstory.h: ../StoryTime_01/Read/readstory.ui
+	/Users/zthunder/Qt/5.5/clang_64/bin/uic ../StoryTime_01/Read/readstory.ui -o ui_readstory.h
+
+ui_signup.h: ../StoryTime_01/signup.ui
+	/Users/zthunder/Qt/5.5/clang_64/bin/uic ../StoryTime_01/signup.ui -o ui_signup.h
 
 compiler_rez_source_make_all:
 compiler_rez_source_clean:
@@ -706,6 +763,7 @@ main.o: ../StoryTime_01/main/main.cpp ../StoryTime_01/main/login.h \
 		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
 		../StoryTime_01/Write/writestory.h \
 		../StoryTime_01/Write/writingforoptions.h \
+		../StoryTime_01/signup.h \
 		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QApplication \
 		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qapplication.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../StoryTime_01/main/main.cpp
@@ -746,6 +804,7 @@ login.o: ../StoryTime_01/main/login.cpp ../StoryTime_01/main/login.h \
 		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
 		../StoryTime_01/Write/writestory.h \
 		../StoryTime_01/Write/writingforoptions.h \
+		../StoryTime_01/signup.h \
 		ui_login.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o login.o ../StoryTime_01/main/login.cpp
 
@@ -762,6 +821,52 @@ writingforoptions.o: ../StoryTime_01/Write/writingforoptions.cpp ../StoryTime_01
 		ui_writingforoptions.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o writingforoptions.o ../StoryTime_01/Write/writingforoptions.cpp
 
+readstory.o: ../StoryTime_01/Read/readstory.cpp ../StoryTime_01/Read/readstory.h \
+		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
+		ui_readstory.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o readstory.o ../StoryTime_01/Read/readstory.cpp
+
+users.o: ../StoryTime_01/users.cpp ../StoryTime_01/users.h \
+		../StoryTime_01/storydata.h \
+		../StoryTime_01/options.h \
+		../../../../Qt/5.5/clang_64/lib/QtCore.framework/Headers/QString \
+		../../../../Qt/5.5/clang_64/lib/QtCore.framework/Headers/qstring.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o users.o ../StoryTime_01/users.cpp
+
+storydata.o: ../StoryTime_01/storydata.cpp ../StoryTime_01/storydata.h \
+		../StoryTime_01/options.h \
+		../../../../Qt/5.5/clang_64/lib/QtCore.framework/Headers/QString \
+		../../../../Qt/5.5/clang_64/lib/QtCore.framework/Headers/qstring.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o storydata.o ../StoryTime_01/storydata.cpp
+
+options.o: ../StoryTime_01/options.cpp ../StoryTime_01/options.h \
+		../../../../Qt/5.5/clang_64/lib/QtCore.framework/Headers/QString \
+		../../../../Qt/5.5/clang_64/lib/QtCore.framework/Headers/qstring.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o options.o ../StoryTime_01/options.cpp
+
+signup.o: ../StoryTime_01/signup.cpp ../StoryTime_01/signup.h \
+		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/QtSql \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsql.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqldriver.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqldriverplugin.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlerror.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlfield.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlindex.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlquery.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlrecord.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlresult.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlrelationaldelegate.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlrelationaltablemodel.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqltablemodel.h \
+		../../../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qtsqlversion.h \
+		ui_signup.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o signup.o ../StoryTime_01/signup.cpp
+
 moc_entry.o: moc_entry.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_entry.o moc_entry.cpp
 
@@ -773,6 +878,12 @@ moc_writestory.o: moc_writestory.cpp
 
 moc_writingforoptions.o: moc_writingforoptions.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_writingforoptions.o moc_writingforoptions.cpp
+
+moc_readstory.o: moc_readstory.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_readstory.o moc_readstory.cpp
+
+moc_signup.o: moc_signup.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_signup.o moc_signup.cpp
 
 ####### Install
 

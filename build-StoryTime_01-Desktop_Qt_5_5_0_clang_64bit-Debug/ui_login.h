@@ -89,7 +89,7 @@ public:
 
         indicator = new QLabel(centralWidget);
         indicator->setObjectName(QStringLiteral("indicator"));
-        indicator->setGeometry(QRect(100, 270, 121, 21));
+        indicator->setGeometry(QRect(100, 250, 121, 21));
         Login->setCentralWidget(centralWidget);
 
         retranslateUi(Login);

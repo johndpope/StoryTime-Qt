@@ -39,6 +39,7 @@ public:
     QHBoxLayout *horizontalLayout;
     QPushButton *BtnSetOption1;
     QPushButton *BtnSetOption2;
+    QPushButton *BtnSend;
 
     void setupUi(QDialog *WritingForOptions)
     {
@@ -87,6 +88,9 @@ public:
 
         horizontalLayout->addWidget(BtnSetOption2);
 
+        BtnSend = new QPushButton(WritingForOptions);
+        BtnSend->setObjectName(QStringLiteral("BtnSend"));
+        BtnSend->setGeometry(QRect(60, 270, 113, 32));
 
         retranslateUi(WritingForOptions);
 
@@ -108,6 +112,7 @@ public:
         BtnSetOption->setText(QApplication::translate("WritingForOptions", "Set Options", 0));
         BtnSetOption1->setText(QApplication::translate("WritingForOptions", "Set Option1", 0));
         BtnSetOption2->setText(QApplication::translate("WritingForOptions", "Set Option2", 0));
+        BtnSend->setText(QApplication::translate("WritingForOptions", "Send!", 0));
     } // retranslateUi
 
 };

@@ -7,6 +7,7 @@
 #include <QtDebug>
 #include <QFileInfo>
 #include "entry.h"
+#include "signup.h"
 
 
 namespace Ui {
@@ -30,9 +31,13 @@ private slots:
 
     void on_BtnForget_released();
 
+
+
 private:
     Ui::Login *ui;
     QSqlDatabase loginData; // phone id + password
+    SignUp *signUp;
+
 };
 
 #endif // LOGIN_H
